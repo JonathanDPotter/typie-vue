@@ -1,0 +1,50 @@
+$dark: darkslategrey;
+$light: rgb(241, 175, 75);
+$primary: rgb(170, 170, 255);
+$success: rgb(123, 255, 123);
+$warning: rgb(253, 132, 132);
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+input {
+  background-color: $light;
+  color: $dark;
+  border: 1px solid $dark;
+
+  &:active {
+    background-color: lighten($light, 20);
+  }
+}
+
+.btn {
+  border-radius: 0;
+  color: $dark;
+}
+
+.router-link-active {
+  text-decoration: underline;
+}
+
+@for $i from 1 through 20 {
+  .vh-#{$i * 5} {
+    height: #{$i * 5}vh;
+  }
+}
